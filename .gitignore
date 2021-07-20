@@ -1,0 +1,12 @@
+src/PhotoGalleryCore/wwwroot/lib/
+src/database.db
+test/obj/
+test/bin/
+src/.vs/
+src/PhotoGalleryCore/obj
+src/PhotoGalleryCore/bin
+src/test/bin
+/src/test/obj
+/src/PhotoGalleryCore/photogallery.db
+.vs/
+.vscode/
