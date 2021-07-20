@@ -1,0 +1,30 @@
+@page
+@model pages3.Pages.Upload;
+
+@{
+    ViewData["Title"] = "رفع الصورة";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-page="Upload" enctype="multipart/form-data">
+
+    <label asp-for="InputModel.Photo.Caption"></label>
+    <input asp-for="InputModel.Photo.Caption" />
+    <span asp-validation-for="InputModel.Photo.Caption" style="color:red"></span>
+
+    <label asp-for="InputModel.Photo.Description" for="Description"></label>
+    <textarea rows="3" asp-for="InputModel.Photo.Description" ></textarea>
+    <span asp-validation-for="InputModel.Photo.Description" style="color:red"></span>
+
+
+    <label>الملف</label>
+    <input asp-for="InputModel.FormFile" placeholder="الملف" />
+
+    <input type="submit" value="رفع" asp-page-handler="Upload" class="btn button btn-primary" />
+</form>
+
+@section scripts {
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

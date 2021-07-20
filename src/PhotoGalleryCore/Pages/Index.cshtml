@@ -1,0 +1,24 @@
+﻿@page
+@using PhotoGalleryCore.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "الصفحة الرئيسية";
+}
+
+<div class="grid-x" style="margin-top:30px;">
+
+    @foreach (Photo picture in Model.Photos)
+    {
+    <div class="cell">
+        <div class="card" >
+                <h4>@picture.Caption</h4>
+            <div class="card-divider">
+            </div>
+            <img src="@Url.Content(picture.Path)" alt="@picture.Caption">
+            <div class="card-section">
+                <p>@picture.Description</p>
+            </div>
+        </div>
+    </div>
+    }
+</div>
