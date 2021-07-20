@@ -1,0 +1,17 @@
+﻿@page "{photoid}"
+@model pages3.Pages.DetailsModel
+@{
+}
+
+
+<div class="cell">
+    <div class="card">
+        <h4>@Model.Photo.Caption</h4>
+        <div class="card-divider">
+        </div>
+        <img src="~/@Model.Photo.Path" alt="@Model.Photo.Caption">
+        <div class="card-section">
+            <p>@Model.Photo.Description</p>
+        </div>
+    </div>
+</div>
